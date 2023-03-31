@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'blog/css/profile.css' %}">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="card-container">
+	<span class="pro">Участник</span>
+	<img class="round" src="https://th.bing.com/th/id/OIP.SBQiBRuSsUw1CwIAd0uGjQHaHa?pid=ImgDet&rs=1" alt="user" height="50%" width="50%" />
+	<h3>{{ user.username }}</h3>
+	<h6>Москва</h6>
+	<p>Пользователь <br/>ZO_опарка</p>
+	<div class="buttons">
+		<button class="primary ghost" onclick="location.href='{% url 'logout' %}?next=/accounts/login/?next=/profile'">Log out</button>
+	</div>
+	<div class="skills">
+		<h6>Добро пожаловать!</h6>
+		<ul>
+
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

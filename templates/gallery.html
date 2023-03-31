@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZO_oпарк|Форум</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+<div class="g-image"
+     style="background: linear-gradient(90deg, rgba(210,213,27,1) 0%, rgba(34,164,129,1) 49%, rgba(20,121,142,1) 100%); min-height: 4000px;">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Новости ZO_oпарка</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">О нас</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Разделы сайта
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/birds">Новости о птицах</a></li>
+                                <li><a class="dropdown-item" href="/mammals">Новости о млекопитающих</a></li>
+                                <li><a class="dropdown-item" href="/fish">Новости о рыбах</a></li>
+                                <li><a class="dropdown-item" href="/shue">
+                                    Форум
+                                </a></li>
+                                <li><a class="dropdown-item" href="/gallery">
+                                    <mark>Галерея</mark>
+                                </a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/contact">Контактная информация</a></li>
+                            </ul>
+                        </li>
+                        <div class="nav-item">
+                            <form action="{% url 'search' %}" method="get">
+                                <input type="search,text" name="q" placeholder="Поиск новостей">
+                                <button type="submit">Найти</button>
+                            </form>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+        <div style="margin-top: 1%">
+            <div class="container-fluid">
+                <div class="row align-items-start">
+                    <div class="col">
+                        <div class="bg-image card shadow-1-strong"
+                             style="background: linear-gradient(90deg, rgba(115,94,18,1) 0%, rgba(161,181,49,1) 52%, rgba(23,149,175,1) 100%);; text-align: center;">
+                            <div class="card-body text-white">
+                                <h1> Галерея </h1>
+                                <img src="https://palchevsky.ru/images/lenivets.jpeg"
+                                     alt="фото0" width="50%" height="50%">
+                                <img src="https://weekendo.ru/wp-content/uploads/2017/04/807_%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9-%D0%B7%D0%BE%D0%BE%D0%BF%D0%B0%D1%80%D0%BA9.jpg"
+                                     alt="фото1" width="50%" height="50%">
+                                <img src="https://ss.metronews.ru/userfiles/materials/148/1482757/858x540_bc541534.jpg"
+                                     alt="фото-3" width="50%" height="50%">
+                                <img src="https://cdnn21.img.ria.ru/images/155531/26/1555312624_0:108:3260:1942_1920x0_80_0_0_157c4dc62f5d7cc37c0ec27735affc0e.jpg"
+                                     alt="фото2" width="50%" height="50%">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Rostov-on-Don-Zoo-Rhino.jpg"
+                                     alt="фото3" width="50%" height="50%">
+                                <img src="http://cdn.iz.ru/sites/default/files/styles/900x506/public/news-2018-10/RIAN_5611789.HR_.ru_.jpg?itok=DIHWpReM"
+                                     alt="фото4" width="50%" height="50%">
+                                <img src="https://ss.metronews.ru/userfiles/materials/148/1482754/858x540_255d448e.jpg"
+                                     alt="фото-1" width="50%" height="50%">
+                                <img src="https://cdnn1.img.sputniknews-uz.com/img/07e6/01/1c/22438662_49:0:760:533_1920x0_80_0_0_bff3e7efe6080198189b267b9c9b6537.jpg"
+                                     alt="фото5" width="50%" height="50%">
+                                <img src="https://oms.msk.ru/wp-content/uploads/2019/06/%D0%B8%D1%80%D0%B1%D0%B8%D1%81-3.jpg"
+                                     alt="фото6" width="50%" height="50%">
+                                <img src="https://ss.metronews.ru/userfiles/materials/148/1482756/858x540_cb5325a2.jpg"
+                                     alt="фото-2" width="50%" height="50%">
+                                <img src="https://static.78.ru/images/uploads/1665679220014.jpg"
+                                     alt="фото7" width="50%" height="50%">
+                                <img src="https://wallbox.ru/wallpapers/main2/201727/14990347025959744ebf1163.12374159.jpg"
+                                     alt="фото8" width="50%" height="50%">
+
+                            </div>
+                            <img src="https://logos-world.net/wp-content/uploads/2021/03/San-Diego-Zoo-Logo.png"
+                                     alt="ZO_опаркLogo" width="10%"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    {% endblock content %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'blog/css/signup.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<!--/templates/registration.html-->
+<div class="wrapper">
+    <div class="logo">
+        <img src="https://www.bing.com/images/blob?bcid=RE92vm.1zmsFnw" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        Zo_опарк
+        <h2>Регистрация</h2>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+</div>
+
+{#{% block content %}#}
+{#    <h2>Регистрация</h2>#}
+{##}
+{#    <form method="post">#}
+{#        {% csrf_token %}#}
+{#        {{ form }}#}
+{#        <input type="submit" value="Зарегистрироваться">#}
+{#    </form>#}
+{##}
+{#    <a href="{% url 'login' %}">Войти |</a>#}
+{#    <a href="{% url 'home' %}">Вернуться на главную</a>#}
+{#{% endblock %}#}
+</body>
+</html>
